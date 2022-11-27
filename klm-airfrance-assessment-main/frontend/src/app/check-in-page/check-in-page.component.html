@@ -1,0 +1,56 @@
+<app-header>
+  <app-content key="check-in-page.header.title"></app-content>
+</app-header>
+<div class="canvas">
+  <form [formGroup]="form" class="check-in-form content-card" (ngSubmit)="submit()">
+    <div class="booking-wrap">
+      <div class="booking-html">
+        <h1>{{'check-in-page.title' | appContentPipe}}</h1>
+        <div class="booking-form">
+          <div class="sign-in-htm">
+            <div class="group">
+              <label for="user" class="label">
+                <app-content key="check-in-page.form.booking-code"></app-content>
+              </label>
+              <input id="user" maxlength="6" minlength="5" formControlName="bookingCode" type="text" class="input">
+              <span class="form-error" *ngIf="bookingFormControl.errors?.['required'] ">
+                <app-content key="check-in-page.family-name.error.required"></app-content>
+              </span>
+              <span class="form-error" *ngIf="bookingFormControl.errors?.['minlength'] ">
+                <app-content key="check-in-page.booking-code.error.minlength"></app-content>
+              </span>
+            </div>
+            <div class="group">
+              <label for="pass" class="label">
+                <app-content key="check-in-page.form.family-name"></app-content>
+              </label>
+              <input id="family-name" maxlength="30" minlength="2" formControlName="familyName" type="text"
+                class="input" data-type="password">
+              <span class="form-error" *ngIf="familyNameFormControl.errors?.['required']">
+                <app-content key="check-in-page.family-name.error.required"></app-content>
+              </span>
+              <span class="form-error" *ngIf="familyNameFormControl.errors?.['minlength']">
+                <app-content key="check-in-page.family-name.error.minlength"></app-content>
+              </span>
+            </div>
+            <div class="group">
+              <button class="button">
+                <app-content key="check-in-page.form.submit"></app-content>
+              </button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="bookingError === 'not_found'" class="form-error">
+      <app-content key="check-in-page.error.not-found"></app-content>
+    </div>
+    <div *ngIf="bookingError === 'unavailable'" class="form-error">
+      <app-content key="check-in-page.error.unavailable"></app-content>
+    </div>
+    <div *ngIf="bookingError === 'unknown'" class="form-error">
+      <app-content key="check-in-page.error.unknown"></app-content>
+    </div>
+  </form>
+</div>

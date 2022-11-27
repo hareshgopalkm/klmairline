@@ -1,0 +1,22 @@
+{
+  "check-in-page.header.title": "CHECK-IN",
+  "check-in-page.title": "RETRIEVE YOUR BOOKING",
+  "check-in-page.subtitle": "You can find your booking by filling out your family name and the booking code in your booking confirmation.",
+  "check-in-page.form.booking-code": "Booking code",
+  "check-in-page.form.family-name": "Family name",
+  "check-in-page.form.submit": "Retrieve booking",
+  "check-in-page.family-name.error.required": "Family name is required",
+  "check-in-page.family-name.error.minlength": "The family name must contain at least 2 characters",
+  "check-in-page.family-name.error.maxlength": "The family name exceeded the length of 30 characters",
+  "check-in-page.booking-code.error.required": "The booking code is required",
+  "check-in-page.booking-code.error.minlength": "The booking code must contain atleast 5 characters",
+  "check-in-page.booking-code.error.maxlength": "The booking code exceeded the length of 6 characters",
+  "check-in-page.booking-code.error.pattern": "The booking code can only contain alphabetical characters and the numbers 2~9",
+  "check-in-page.error.not-found": "No booking found with this booking code and family name.",
+  "check-in-page.error.unavailable": "No bookings could be fetched at this time.",
+  "check-in-page.error.unknown": "Something went wrong while trying to get the booking.",
+  "booking-details-page.header.title": "Booking details:",
+  "booking-details-page.booking": "Booking",
+  "booking-details-page.passengers": "Passengers",
+  "booking-details-page.flight-info": "Flight information"
+}
