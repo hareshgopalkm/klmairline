@@ -41,16 +41,17 @@
 
           </div>
         </div>
+        <div *ngIf="bookingError === 'not_found'" class="form-error">
+          <app-content key="check-in-page.error.not-found"></app-content>
+        </div>
+        <div *ngIf="bookingError === 'unavailable'" class="form-error">
+          <app-content key="check-in-page.error.unavailable"></app-content>
+        </div>
+        <div *ngIf="bookingError === 'unknown'" class="form-error">
+          <app-content key="check-in-page.error.unknown"></app-content>
+        </div>
       </div>
     </div>
-    <div *ngIf="bookingError === 'not_found'" class="form-error">
-      <app-content key="check-in-page.error.not-found"></app-content>
-    </div>
-    <div *ngIf="bookingError === 'unavailable'" class="form-error">
-      <app-content key="check-in-page.error.unavailable"></app-content>
-    </div>
-    <div *ngIf="bookingError === 'unknown'" class="form-error">
-      <app-content key="check-in-page.error.unknown"></app-content>
-    </div>
+    
   </form>
 </div>
