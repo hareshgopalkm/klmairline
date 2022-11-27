@@ -14,7 +14,7 @@
               </label>
               <input id="user" maxlength="6" minlength="5" formControlName="bookingCode" type="text" class="input">
               <span class="form-error" *ngIf="bookingFormControl.errors?.['required'] ">
-                <app-content key="check-in-page.family-name.error.required"></app-content>
+                <app-content key="check-in-page.booking-code.error.required"></app-content>
               </span>
               <span class="form-error" *ngIf="bookingFormControl.errors?.['minlength'] ">
                 <app-content key="check-in-page.booking-code.error.minlength"></app-content>
